@@ -1,0 +1,70 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+}
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: #DFDFDF;
+    height: 100vh;
+    width: 100vw;
+}
+.types{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+.UI{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .5em;
+}
+
+h1{
+    color: #4682B4;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.UI input, 
+.UI textarea {
+    border: 2px solid steelblue;
+
+}
+
+.UI input[type="submit"] {
+    border: 2px solid white;
+    background-color: steelblue;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.UI input[type="text"]{
+    padding: 5px 10px;
+    width: 40em ;
+}
+.UI input[type="email"]{
+    padding: 5px 10px;
+}
+.UI textarea[name="textarea"] {
+    width: 40em;
+}
+.UI form div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+ul, li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+
+
