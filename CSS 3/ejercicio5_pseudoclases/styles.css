@@ -3,68 +3,115 @@
    margin: 0;
    box-sizing: border-box; 
 }
-section{
-    display: flex;
-    flex-direction: column;
+/* ======= Estilos generales ======= */
+section {
     background-color: #DFDFDF;
-    height: 100vh;
-    width: 100vw;
-}
-.types{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1em;
-}
-.UI{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: .5em;
+    padding: 20px;
 }
 
-h1{
+/* Colocamos las dos partes arriba y la UI debajo */
+.types {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px; /* separa de la parte UI */
+}
+
+.types > div {
+    flex: 1;
+}
+
+h1 {
     color: #4682B4;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid white;
     text-align: center;
 }
 
-.UI input, 
-.UI textarea {
-    border: 2px solid steelblue;
-
+/* Quitamos estilo de listas */
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.UI input[type="submit"] {
-    border: 2px solid white;
+/* Botón */
+input[type="submit"] {
     background-color: steelblue;
     color: white;
+    border: 2px solid steelblue;
+    padding: 6px 12px;
     cursor: pointer;
+}
+
+/* Inputs básicos */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 1px solid steelblue;
+    padding: 6px;
+    margin: 5px;
+}
+
+/* ======= Paso 3: NTH-OF-TYPE ======= */
+.nth-of-type li:nth-of-type(odd) {
+    background-color: blue;
+    color: white;
+    font-size: 2em;
+}
+
+.nth-of-type div:nth-of-type(odd) {
+    background-color: orange;
+    color: white;
+    font-size: 2em;
+}
+
+.nth-of-type strong {
+    color: red;
+    font-size: 1.5em;
+}
+
+/* Bordes, margen y padding */
+.nth-of-type * {
+    border: 1px solid black;
+    margin: 6px;
+    padding: 2px;
+}
+
+/* ======= Paso 4: NTH-CHILD ======= */
+.nth-child li:nth-child(odd) {
+    background-color: green;
+    color: white;
+}
+
+.nth-child li:nth-child(even) {
+    background-color: red;
+    color: white;
+}
+
+.nth-child li {
+    margin: 6px;
+    padding: 2px;
+}
+
+/* ======= Paso 5: Pseudo Clases UI ======= */
+
+/* Campos deshabilitados */
+input:disabled,
+textarea:disabled {
+    background-color: #666;
+    cursor: no-drop;
+    color: white;
+}
+
+/* Campo email habilitado */
+input[type="email"]:enabled {
+    background-color: yellow;
+    color: green;
+}
+
+/* Labels de radio checked */
+input[type="radio"]:checked + label {
     font-weight: bold;
-    padding: 10px 20px;
+    color: white;
+    border: 1px solid steelblue;
+    padding: 2px;
 }
-.UI input[type="text"]{
-    padding: 5px 10px;
-    width: 40em ;
-}
-.UI input[type="email"]{
-    padding: 5px 10px;
-}
-.UI textarea[name="textarea"] {
-    width: 40em;
-}
-.UI form div:first-child{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-ul, li {
-    list-style: none;
-    margin: 5px 0;
-}
-
-
-
